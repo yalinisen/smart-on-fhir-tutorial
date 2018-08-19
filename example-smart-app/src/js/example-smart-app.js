@@ -146,7 +146,7 @@ var smart = FHIR.client(demo),
 smart.patient.read().then(function(pt) {
   displayPatient (pt);
 });
-*/
+
 // A more advanced query: search for active Prescriptions, including med details
 smart.patient.api.fetchAll({type: "Observation"})
 .then(function(results, refs) {
@@ -162,5 +162,5 @@ function displayObservation (observation) {
   cell1.innerHTML = observation.code.coding[0].code;
   cell2.innerHTML = observation.valueQuantity.value;
 }
-
+*/
 })(window);
