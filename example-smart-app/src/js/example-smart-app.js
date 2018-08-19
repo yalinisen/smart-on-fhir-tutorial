@@ -20,8 +20,16 @@
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
                       }
                     }
-        type: 'DiagnosticReport',
-          query: {}
+           /* Create a medication list */
+      smart.patient.api.search({type: "MedicationOrder", query: {patient}
+        }).then(function(r){
+            r.data.entry.forEach(function(re) {
+              var rx = re.resource;
+              var row = $("<li> " + rx.medicationCodeableConcept.text + "</li>");
+              $("#med_list").append(row);
+            })
+       // type: 'DiagnosticReport',
+       //   query: {}
 });
         $.when(pt, obv).fail(onError);
 
