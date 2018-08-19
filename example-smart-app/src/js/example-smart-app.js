@@ -148,7 +148,7 @@ function displayObservation (observation) {
   //added from https://github.com/smart-on-fhir/client-js/blob/master/example/index.html
   
       /* Create a medication list */
-      smart.patient.api.search({type: "MedicationOrder", query: {patient}
+      smart.patient.api.search({type: "MedicationOrder", query: {smart.patient}
         }).then(function(r){
             r.data.entry.forEach(function(re) {
               var rx = re.resource;
