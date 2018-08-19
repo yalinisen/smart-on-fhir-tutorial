@@ -8,8 +8,10 @@
     <script>
 
       var demo = {
-        serviceUrl: "https://fhir-open-api-dstu2.smarthealthit.org",
-        patientId: "99912345",
+     //   serviceUrl: "https://fhir-open-api-dstu2.smarthealthit.org",
+        serviceUrl:  "http://hapi.fhir.org/baseDstu3/DiagnosticReport",
+        patientId:  "4771541",
+       // patientId: "99912345",
         auth: {
           type: 'none'
         }
@@ -27,7 +29,7 @@
       });
 
       /* Create a medication list */
-      smart.patient.api.search({type: "MedicationOrder", query: {patient: demo.patientId}
+      smart.patient.api.search({type: "Medication", query: {patient: demo.patientId}
         }).then(function(r){
             r.data.entry.forEach(function(re) {
               var rx = re.resource;
