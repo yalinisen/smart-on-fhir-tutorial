@@ -130,4 +130,15 @@
     $('#hdl').html(p.hdl);
   };
 
+  //addn by yal
+  
+function displayObservation (observation) {
+  var table = document.getElementById("obs_table");
+  var row = table.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = observation.code.coding[0].code;
+  cell2.innerHTML = observation.valueQuantity.value;
+}
+
 })(window);
