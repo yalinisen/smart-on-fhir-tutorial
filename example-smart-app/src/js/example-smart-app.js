@@ -27,7 +27,7 @@
              
   type: 'Condition',
   category: 'problem',
-  clinicalstatus: 'active'
+ // clinicalstatus: 'active'
 });
         $.when(pt, obv).fail(onError);
 
