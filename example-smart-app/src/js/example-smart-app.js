@@ -131,7 +131,7 @@
   };
 
   //addn by yal
-/*
+
 function displayPatient (pt) {
   document.getElementById('patient_name').innerHTML = getPatientName(pt);
 }
@@ -144,7 +144,7 @@ function displayObservation (observation) {
   cell1.innerHTML = observation.code.coding[0].code;
   cell2.innerHTML = observation.valueQuantity.value;
 }
-
+/*
 var demo = {
     serviceUrl: "https://api.hspconsortium.org/hspcdemo/open",
     patientId: "BILIBABY"
