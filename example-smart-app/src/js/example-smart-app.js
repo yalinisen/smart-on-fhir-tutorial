@@ -20,10 +20,16 @@
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
                       }
                     }
-          type: 'DiagnosticReport',
-                    query: {}
-                  });
+      //    type: 'DiagnosticReport',
+      //              query: {}
+       //           });
 
+        
+       
+  type: 'Condition',
+  category: 'problem',
+  clinicalstatus: 'active'
+});
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv) {
