@@ -24,8 +24,7 @@
       //              query: {}
        //           });
 
-        
-       
+             
   type: 'Condition',
   category: 'problem',
   clinicalstatus: 'active'
