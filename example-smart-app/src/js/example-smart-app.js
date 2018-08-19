@@ -132,7 +132,7 @@
 
   //addn by yal
 
-
+/*
 var demo = {
     serviceUrl: "https://api.hspconsortium.org/hspcdemo/open",
     patientId: "BILIBABY"
@@ -146,7 +146,7 @@ var smart = FHIR.client(demo),
 smart.patient.read().then(function(pt) {
   displayPatient (pt);
 });
-
+*/
 // A more advanced query: search for active Prescriptions, including med details
 smart.patient.api.fetchAll({type: "Observation"})
 .then(function(results, refs) {
