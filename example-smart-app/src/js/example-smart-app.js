@@ -20,14 +20,7 @@
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
                       }
                     }
-           /* Create a medication list */
-      smart.patient.api.search({type: "MedicationOrder", query: {patient}
-        }).then(function(r){
-            r.data.entry.forEach(function(re) {
-              var rx = re.resource;
-              var row = $("<li> " + rx.medicationCodeableConcept.text + "</li>");
-              $("#med_list").append(row);
-            })
+       
        // type: 'DiagnosticReport',
        //   query: {}
 });
@@ -151,6 +144,18 @@ function displayObservation (observation) {
   cell1.innerHTML = observation.code.coding[0].code;
   cell2.innerHTML = observation.valueQuantity.value;
 }
+  
+  //added from https://github.com/smart-on-fhir/client-js/blob/master/example/index.html
+  
+      /* Create a medication list */
+      //smart.patient.api.search({type: "MedicationOrder", query: {patient}
+        }).then(function(r){
+            r.data.entry.forEach(function(re) {
+              var rx = re.resource;
+              var row = $("<li> " + rx.medicationCodeableConcept.text + "</li>");
+              $("#med_list").append(row);
+            })
+  //end of addn
 /*
 var demo = {
     serviceUrl: "https://api.hspconsortium.org/hspcdemo/open",
