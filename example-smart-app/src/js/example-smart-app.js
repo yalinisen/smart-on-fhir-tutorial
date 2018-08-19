@@ -163,7 +163,8 @@ smart.patient.read().then(function(pt) {
 smart.patient.api.fetchAll({type: "Observation"})
 .then(function(results, refs) {
   results.forEach(function(observation){
-    displayObservation(observation);
+  //  displayObservation(observation);
+    document.write(observation);
   });
 });
 
