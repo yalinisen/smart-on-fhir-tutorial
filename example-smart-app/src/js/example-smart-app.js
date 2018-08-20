@@ -157,7 +157,7 @@ function displayObservation (observation) {
             })
   //end of addn
         
-/*
+
 
  var obvmed = smart.patient.api.fetchAll({
                     type: 'Medication',
@@ -168,8 +168,15 @@ function displayObservation (observation) {
                    //           'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
                       }
                     }
-
-
+ $.when(pt, obvmed).done(function(patient, obvmed) {
+          var byCodes2 = smart.byCodes(obvmed, 'code');
+         // var gender = patient.gender;
+   
+   alert('hehe');
+   
+   
+ }
+/*
 
 var demo = {
     serviceUrl: "https://api.hspconsortium.org/hspcdemo/open",
